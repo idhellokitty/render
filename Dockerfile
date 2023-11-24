@@ -13,6 +13,7 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 欧洲心脏病学会
 然后CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]22
 ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]443
-["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
+["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]80
+["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]54321
 突耳
 #设置根#22#Shellinabox:CMD["/usr/bin/shellinaboxd"，"-t"，"-S"，"/：LOGIN"]+++M
