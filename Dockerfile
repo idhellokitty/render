@@ -1,17 +1,17 @@
-# 使用 Ubuntu 22.04 作为基础镜像
-FROM ubuntu:22.04
+#安装 Shellinabox
+运行apt-获取更新&\运行apt-获取更新&\
 
-# 安装 Shellinabox
-RUN apt-get update && \
-    apt-get install -y shellinabox && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+apt-get install -y shellinabox && \
+apt-清洁&\apt-清洁&\
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+#启动 Shellinabox
+运行echo'root:root'|chpasswd
 
-# 设置 root 用户的密码为 'root'
-RUN echo 'root:frepai' | chpasswd
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+#设置 root#22#Shellinabox:CMD["/usr/bin/shellinaboxd"，"-t"，"-S"，"/：LOGIN"]+++M
 
-# 暴露 22 端口
-EXPOSE 22
+欧洲心脏病学会
+然后CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]22
 
-# 启动 Shellinabox
-CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
+突耳
+#安装 Shellinabox
