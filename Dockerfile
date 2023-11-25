@@ -1,21 +1,18 @@
-出了问题，我们无法处理那个文件。软包
-再试一次。编辑Dockerfile文件内容
+# 使用 Ubuntu 22.04 作为基础镜像
+FROM ubuntu:22.04
 
-运行 echo'root:root'|chpasswd
-使用一个不空的文件。制表符
-这个文件是隐藏的。缩进尺寸
-再试一次换行模式
-另一份文件。无包裹
+# 安装 Shellinabox
+RUN apt-get update && \
+    apt-get install -y shellinabox && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-运行 echo'root:root'|chpasswd
+# 设置 root 用户的密码为 'root'
+RUN echo 'root:root' | chpasswd
 
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-突耳
-欧洲心脏病学会
-然后 CMD["/usr/bin/shellinaboxd"，"-t"，"-s"，"/：LOGIN"]22
-     
-     CMD["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]443
-     
-    CMD["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]80
-突耳
+# 暴露 22 端口
+EXPOSE 22
+EXPOSE 443
+
+# 启动 Shellinabox
+CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
