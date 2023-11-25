@@ -14,6 +14,8 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 突耳
 欧洲心脏病学会
 然后 CMD["/usr/bin/shellinaboxd"，"-t"，"-s"，"/：LOGIN"]22
-cmd["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]443
-cmd["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]80
+     
+     CMD["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]443
+     
+    CMD["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]80
 突耳
