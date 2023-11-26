@@ -10,11 +10,11 @@ RUN apt-get update && \
 # 设置 root 用户的密码为 'root'
 RUN echo 'root:root' | chpasswd
 
- ## 以下为 Debian / Ubuntu 命令搭建 Reality安装所需组件命令
+# 以下为 Debian / Ubuntu 命令搭建 Reality安装所需组件命令
 REN apt update -y 
     apt install curl wget -y
 
-#安装 X-ui模板
+# 安装 X-ui模板
 EUN  bash<(curl-Lshttps://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)    
 
 # 暴露 22 端口
