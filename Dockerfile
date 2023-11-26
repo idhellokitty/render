@@ -15,7 +15,7 @@ REN apt update -y
     apt install curl wget -y
 
 #安装 X-ui模板
-EUN                  bash<(curl-Lshttps://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)    
+EUN  bash<(curl-Lshttps://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)    
 
 # 暴露 22 端口
 EXPOSE 22
