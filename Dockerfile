@@ -10,7 +10,6 @@ RUN apt-get update && \
 # 设置 root 用户的密码为 'root'
 RUN echo 'root:root' | chpasswd
 
-
 # 暴露 22 端口
 EXPOSE 22
 EXPOSE 443
