@@ -4,6 +4,11 @@ apt update -y && apt install -y curl && apt install     -y socat
 
 #安装 X-ui 面板
 
+另一
+xui:
+
+bash <(wget -qO- https://raw.githubusercontent.com/sing-web/x-ui/main/install_CN.sh)
+另两
 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/956bf85bbac978d56c0e319c5fac2d6db7df9564/install.sh) 0.3.4.4
 
 #安装证书工具
