@@ -5,7 +5,6 @@ FROM ubuntu:22.04
 RUN apt-get update && \
     apt-get install -y shellinabox && \
     apt-get clean && \
-    apt update -y && apt install -y curl && apt install     -y socat
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
@@ -19,7 +18,9 @@ EXPOSE 443
 
 # 启动 Shellinabox
 CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
-
+cmd 
+ apt update -y && apt install -y curl && apt install     -y socat
+cmd 
 
 #安装更新运行环境搭建V2ray节点，一键搭建X-UI面板
 
