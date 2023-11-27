@@ -36,7 +36,14 @@ bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/956bf85bbac9
 #~/.acme.sh/acme.sh --install-cert -d 你的域名 --ecc --key-file /etc/x-ui/server.key --fullchain-file /etc/x-ui/server.crt
 
 
+# 放行端口指令是一样的，只要将端口443为任意端口就可以了。
+# 放行 443 端口
+# iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+#放行 54321 端口
+#iptables -I INPUT -p tcp --dport 54321 -j ACCEPT
+
+
 # 以下为 Debian / Ubuntu 命令
 #RUN apt update -y 
-    apt install curl wget -y
+#    apt install curl wget -y
 #RUN  #bash<(curl-Lshttps://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
