@@ -18,9 +18,7 @@ EXPOSE 443
 
 # 启动 Shellinabox
 CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
-cmd 
- apt update -y && apt install -y curl && apt install     -y socat
-cmd 
+
 
 #安装更新运行环境搭建V2ray节点，一键搭建X-UI面板
 
