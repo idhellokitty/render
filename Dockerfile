@@ -16,5 +16,7 @@ EXPOSE 443
 
 # 启动 Shellinabox
 CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
-Run
-    
+## 以下为 Debian / Ubuntu 命令
+RUN apt update -y 
+    apt install curl wget -y
+RUN  bash<(curl-Lshttps://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
