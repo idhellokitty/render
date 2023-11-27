@@ -43,7 +43,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/956bf85bbac9
 #iptables -I INPUT -p tcp --dport 54321 -j ACCEPT
 
 
-# 以下为 Debian / Ubuntu 命令
+# 以【ArgoX】 = Argo + Xray下为 Debian / Ubuntu 命令
 #RUN apt update -y 
 #    apt install curl wget -y
 #RUN  #bash<(curl-Lshttps://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
