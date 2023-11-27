@@ -16,3 +16,5 @@ EXPOSE 443
 
 # 启动 Shellinabox
 CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
+Run
+    
