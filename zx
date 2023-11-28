@@ -86,6 +86,81 @@ kill -9 895
 kill -9 894
 
 一行一行复制到Linux中使用
+
+
+
+VPS要是ubuntu系统。命令如下：
+
+1.管理员权限
+
+sudo -i 
+
+
+2.安装更新运行环境
+
+Debian/Ubuntu系统执行以下命令：
+
+apt update -y && apt install -y curl && apt install -y socat
+
+
+3.Ubuntu系统下开放所有端口
+
+iptables -P INPUT ACCEPT
+
+iptables -P FORWARD ACCEPT
+
+iptables -P OUTPUT ACCEPT
+
+iptables -F
+
+
+4.运行Acme脚本（需要有个DNS解析好的域名）
+
+curl https://get.acme.sh | sh
+
+
+5.申请证书及密钥
+
+~/.acme.sh/acme.sh --register-account -m xxxx@gmail.com
+
+~/.acme.sh/acme.sh  --issue -d 你的域名   --standalone
+
+
+6.下载证书及密钥
+
+~/.acme.sh/acme.sh --installcert -d 你的域名  --key-file /root/private.key --fullchain-file /root/cert.crt
+
+
+证书路径
+
+/root/cert.crt   公钥
+
+/root/private.key    密钥
+
+
+7.安装&升级x-ui面板一键脚本
+
+bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
+
+
+8.BBR PLUS 四合一脚本
+
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+
+
+9.防火墙解除（甲骨文云）
+
+apt-get purge netfilter-persistent
+
+reboot
+
+
+rm -rf /etc/iptables && reboot
+
+
+
+XUI界面展示
+
 归档
 标签
 
