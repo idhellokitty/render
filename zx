@@ -57,7 +57,35 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh && ch
 
 
 
+ 要知道VPS端口畅通的重要性！分享开启端口与解除端口占用的命令
+- 四月 07, 2022
 
+ 大家在安装搭建节点的时候经常在申请证书等环节报错，无法安装成功，重要的环节就是端口没开放或者端口被占用
+
+
+1.纯净新系统，可执行以下命令：Ubuntu系统下开放所有端口
+
+iptables -P INPUT ACCEPT
+
+iptables -P FORWARD ACCEPT
+
+iptables -P OUTPUT ACCEPT
+
+iptables -F
+
+可以一起复制到Linux中使用
+
+
+
+2.你之前VPS中搭建过乱七八糟服务，用这个解除被占用的主要端口
+
+kill -9 896
+
+kill -9 895
+
+kill -9 894
+
+一行一行复制到Linux中使用
 归档
 标签
 
